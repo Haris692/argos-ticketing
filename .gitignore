@@ -1,0 +1,29 @@
+# --- Node / Vite ---
+node_modules/
+dist/
+*.tsbuildinfo
+.vite/
+coverage/
+
+# --- Environnement (les VITE_* sont publiques, mais on ne versionne que .env.example) ---
+.env
+.env.*
+!.env.example
+
+# --- Supabase ---
+supabase/.temp/
+supabase/.branches/
+supabase/functions/.env
+supabase/functions/.env.*
+
+# --- IDE et système ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+
+# --- Argos / Claude Code ---
+/.ci/
+.claude/settings.local.json
+CLAUDE.local.md
