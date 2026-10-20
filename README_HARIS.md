@@ -35,19 +35,15 @@ Tu parles à l'**orchestrateur** (Opus, effort moyen). Il ne code presque pas : 
 
 ## Installation (une seule fois)
 
-> **Fait le 2026-10-20 par Claude** : git local initialisé (identité « Haris »), spec déplacée dans `docs/`, kit en place.
+> **Fait le 2026-10-20 par Claude** : git initialisé (identité « Haris ») ; Node 24, Deno 2.9 et GitHub CLI installés, gh connecté à `Haris692` ; repo **public** https://github.com/Haris692/argos-ticketing créé et poussé (Pages refusé en privé sur l'offre gratuite) ; Pages activé en mode GitHub Actions.
 
-1. **Outils** (absents de la machine au 2026-10-20) :
-   - **Node.js LTS** : `winget install OpenJS.NodeJS.LTS`
-   - **Docker Desktop** (requis par Supabase en local) : `winget install Docker.DockerDesktop`, puis le lancer une fois.
-   - **Supabase CLI** : `npm install -g supabase` ne fonctionne pas ; utiliser Scoop (`scoop bucket add supabase https://github.com/supabase/scoop-bucket.git` puis `scoop install supabase`) ou l'installer en dépendance du projet (`npx supabase`). Claude te proposera l'option retenue en T1.1.
-   - **Deno** (tests des edge functions) : `winget install DenoLand.Deno`
-   - **GitHub CLI** (optionnel) : `winget install GitHub.cli`
-2. **Supabase** : créer un projet (l'offre gratuite suffit pour développer ; voir la question 6 de `docs/STATUS.md` pour la prod). Garder la référence du projet ; **ne donne jamais la clé secrète** à Claude.
-3. **GitHub** : créer un repo **privé** `argos-ticketing`, puis activer GitHub Pages avec la source « GitHub Actions ». C'est toi qui ajoutes le remote et fais le premier push.
-4. **Trancher les questions ouvertes** de `docs/STATUS.md` (ou laisser Claude te les poser au lancement de P1).
-5. **Lancer Claude Code dans ce dossier.** La session démarre automatiquement en mode orchestrateur.
-6. **Coller le contenu de `KICKOFF.md`.**
+1. **Outils restants** :
+   - **Docker Desktop** (requis par Supabase en local) : `winget install Docker.DockerDesktop`, puis le lancer une fois (peut demander un redémarrage pour WSL2).
+   - **Supabase CLI** : pas d'installation npm globale ; Scoop ou dépendance de dev du projet (`npx supabase`). Choisi en T1.1.
+2. **Supabase** : créer un **nouveau** projet, distinct de celui de la v1 (l'offre gratuite suffit pour développer ; voir la question 6 de `docs/STATUS.md` pour la prod). **Ne donne jamais la clé secrète** à Claude.
+3. **Trancher les questions ouvertes** de `docs/STATUS.md` (ou laisser Claude te les poser au lancement de P1).
+4. **Lancer Claude Code dans ce dossier.** La session démarre automatiquement en mode orchestrateur.
+5. **Coller le contenu de `KICKOFF.md`.**
 
 ## Au quotidien
 

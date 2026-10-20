@@ -5,12 +5,14 @@
 
 ## Où on en est
 - **Phase** : aucune commencée. Kit Claude Code en place (organisation reprise de Brume, D-010).
-- **Repo** : git local initialisé (branche `main`), pas encore de dépôt GitHub.
-- **Environnement** : Node, npm, Docker, Supabase CLI, Deno et gh **absents** de la machine (constat du 2026-10-20, à confirmer en T1.1).
+- **Repo** : https://github.com/Haris692/argos-ticketing (public : Pages exige un repo public sur l'offre gratuite, D-016). Branche `main` suivie.
+- **Pages** : activé en mode GitHub Actions → https://haris692.github.io/argos-ticketing/ (Vite : `base: '/argos-ticketing/'`). Rien de déployé (workflow en T1.10).
+- **Ancien repo `Haris692/Argos`** (v1 : clients, parc, facturation, en ligne) : laissé intact, distinct de ce projet.
+- **Environnement** : Node 24.20, npm 11.19, Deno 2.9.7, gh 2.102 (connecté `Haris692`) installés le 2026-10-20. **Manquent** : Docker Desktop, Supabase CLI.
 
 ## Reprise à froid
-- **Prochaine étape** : Haris suit `README_HARIS.md` (étapes 1 à 4), puis colle `KICKOFF.md` dans une nouvelle session.
-- **À faire par Haris** : installer les outils, créer le projet Supabase et le repo GitHub (spec §16), trancher les questions ci-dessous.
+- **Prochaine étape** : nouvelle session dans ce dossier, coller `KICKOFF.md`.
+- **À faire par Haris** : accord pour Docker Desktop (licence + redémarrage WSL2 possible) ; créer le projet Supabase (spec §16) ; trancher les questions ci-dessous.
 
 ## Questions ouvertes pour Haris (à trancher avant ou pendant /phase P1)
 1. **Contact désactivé** : un contact désactivé dont le domaine est autorisé peut encore créer des tickets par email (§8.5). Reco : quarantaine.
@@ -19,6 +21,8 @@
 4. **Arrondi facturable / non facturable** : 10 min facturables + 10 min non facturables le même jour donnent 30 min comptabilisées (deux groupes, minimum 15 chacun). Voulu ?
 5. **`reply_token` lisible** par les contacts de l'org via l'API (la RLS filtre les lignes, pas les colonnes). Risque faible ; reco : privilèges par colonne ou vue.
 6. **Supabase gratuit** : le projet se met en pause après 7 jours sans activité (emails entrants perdus). Offre Pro avant la mise en prod ?
+7. **Arrondi : v1 contre v2**. La v1 (`Haris692/Argos`, SPEC-Argos.md) facture minimum 30 min puis arrondi au quart d'heure supérieur, avec des paramètres stockés en base par client. La v2 §10/§14.3 dit arrondi au plus proche, minimum 15 min, constantes dans `config.ts`. La v2 fait foi (D-001), mais le futur module Facturation devra trancher : confirmer avant P2.
+8. **Projet Supabase** : réutiliser celui de la v1 ou en créer un nouveau ? Reco : nouveau projet (schéma incompatible).
 
 ## Points techniques à intégrer au plan P1 (architecte)
 - Triggers qui écrivent là où le client n'a pas de droit (compteur d'org, `email_outbox`, réouverture) : `SECURITY DEFINER`.

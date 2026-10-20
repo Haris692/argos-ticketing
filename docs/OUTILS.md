@@ -7,13 +7,15 @@
 
 | Outil | Version | Statut |
 |---|---|---|
-| Node.js (`node --version`) | — | absent le 2026-10-20 ; LTS récente requise |
-| npm (`npm --version`) | — | absent le 2026-10-20 |
-| Docker Desktop (`docker info`) | — | à relever ; requis par `supabase start` |
-| Supabase CLI (`supabase --version`) | — | absent le 2026-10-20 |
-| Deno (`deno --version`) | — | absent le 2026-10-20 ; requis pour `deno test` |
-| GitHub CLI (`gh --version`) | — | absent le 2026-10-20 ; optionnel |
-| Git | installé ; identité locale au dépôt : Haris | relevé le 2026-10-20 |
+| Node.js (`node --version`) | v24.20.0 (winget `OpenJS.NodeJS.LTS`) | installé le 2026-10-20 |
+| npm (`npm --version`) | 11.19.0 | installé le 2026-10-20 |
+| Docker Desktop (`docker info`) | — | **absent** ; requis par `supabase start` (accord de Haris en attente) |
+| Supabase CLI (`supabase --version`) | — | **absent** ; pas d'install npm globale : Scoop ou `npx supabase` (dépendance de dev), à choisir en T1.1 |
+| Deno (`deno --version`) | 2.9.7 (winget `DenoLand.Deno`) | installé le 2026-10-20 |
+| GitHub CLI (`gh --version`) | 2.102.0, connecté `Haris692` (scopes repo, workflow) ; binaire `C:\Program Files\GitHub CLI\gh.exe` | installé le 2026-10-20 |
+| Git | remote `origin` = https://github.com/Haris692/argos-ticketing ; identité locale : Haris | relevé le 2026-10-20 |
+
+> PATH : après une installation winget, un shell déjà ouvert ne voit pas les nouveaux outils. En PowerShell : `$env:Path = [Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [Environment]::GetEnvironmentVariable("Path","User")`.
 | Système et shell | Windows 11, PowerShell 5.1 et Git Bash ; pas de Python | relevé le 2026-10-20 |
 
 ## 2. Vérification (à confirmer en T1.3)

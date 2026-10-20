@@ -47,7 +47,7 @@ Toujours lire **par section**, jamais un document en entier : `grep -n "^## " <f
    - Aucun `dangerouslySetInnerHTML`. Contenu utilisateur et emails entrants rendus en texte brut.
    - Secrets via `supabase secrets set` et GitHub Secrets uniquement.
 6. **Langue.** Docs et messages à Haris en français, concis.
-7. **Accord de Haris obligatoire** pour : un package hors de la stack (spec §3), toute action sur la **prod Supabase** (`link`, `db push`, `functions deploy`, `secrets set`), `git push`, et tout ce qui est irréversible. Jamais de `supabase db reset --linked`.
+7. **Autorisation d'office (D-017)** : l'orchestrateur fait `git push`, les actions GitHub, les installations et les actions sur la prod Supabase sans demander, mais les **annonce** à Haris. Les sous-agents ne font jamais d'action sur la prod ni de push. Toujours interdits : push forcé, `supabase db reset --linked`. Un package hors de la stack (spec §3) reste une question à poser.
 
 ## Definition of Done
 
