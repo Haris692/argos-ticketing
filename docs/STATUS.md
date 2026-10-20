@@ -8,11 +8,14 @@
 - **Repo** : https://github.com/Haris692/argos-ticketing (public : Pages exige un repo public sur l'offre gratuite, D-016). Branche `main` suivie.
 - **Pages** : activé en mode GitHub Actions → https://haris692.github.io/argos-ticketing/ (Vite : `base: '/argos-ticketing/'`). Rien de déployé (workflow en T1.10).
 - **Ancien repo `Haris692/Argos`** (v1 : clients, parc, facturation, en ligne) : laissé intact, distinct de ce projet.
-- **Environnement** : Node 24.20, npm 11.19, Deno 2.9.7, gh 2.102 (connecté `Haris692`) installés le 2026-10-20. **Manquent** : Docker Desktop, Supabase CLI.
+- **Environnement** : Node 24.20, npm 11.19, Deno 2.9.7, gh 2.102 (connecté `Haris692`), Supabase CLI 2.121.0 (connecté, jeton `argos-ticketing`), Docker Desktop installés le 2026-10-20. **WSL absent** → Docker ne démarre pas → pas de `supabase start` en local.
+- **Supabase cloud** : org « Argos » (`czjovmexjcusphcqtlwe`), projet **« Ticketing »** ref `gvdtzlkzvrqdtzeoxlfu`, eu-west-3, créé le 2026-08-04 (spec d'août), **en pause**. À réutiliser (pas de nouveau projet). Le projet v1 (« Haris692's Project », `jvjicxssrjddhwvfmdyi`, eu-central-1) est aussi en pause, à laisser tel quel.
+- **Limite offre gratuite** : 2 projets actifs déjà (Trail Tycoon, Assise Jeunesse) → la réactivation de « Ticketing » peut être refusée ; il faudrait en mettre un en pause (choix de Haris).
 
 ## Reprise à froid
-- **Prochaine étape** : nouvelle session dans ce dossier, coller `KICKOFF.md`.
-- **À faire par Haris** : accord pour Docker Desktop (licence + redémarrage WSL2 possible) ; créer le projet Supabase (spec §16) ; trancher les questions ci-dessous.
+- **Prochaine étape** : nouvelle session dans ce dossier, coller `KICKOFF.md`. T1.1 à T1.3 et le front (T1.2, T1.8, T1.9) avancent sans Docker ; T1.4 à T1.7 (SQL, pgTAP) attendent WSL.
+- **À faire par Haris** : `wsl --install --no-distribution` (PowerShell admin) puis redémarrage, quand il pourra ; réactiver « Ticketing » dans le dashboard Supabase ; trancher les questions ci-dessous.
+- **Au premier `supabase link`** : vérifier ce que contient « Ticketing » (schéma de la spec d'août ?) avant tout `db push`.
 
 ## Questions ouvertes pour Haris (à trancher avant ou pendant /phase P1)
 1. **Contact désactivé** : un contact désactivé dont le domaine est autorisé peut encore créer des tickets par email (§8.5). Reco : quarantaine.

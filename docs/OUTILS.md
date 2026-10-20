@@ -9,8 +9,8 @@
 |---|---|---|
 | Node.js (`node --version`) | v24.20.0 (winget `OpenJS.NodeJS.LTS`) | installé le 2026-10-20 |
 | npm (`npm --version`) | 11.19.0 | installé le 2026-10-20 |
-| Docker Desktop (`docker info`) | — | **absent** ; requis par `supabase start` (accord de Haris en attente) |
-| Supabase CLI (`supabase --version`) | — | **absent** ; pas d'install npm globale : Scoop ou `npx supabase` (dépendance de dev), à choisir en T1.1 |
+| Docker Desktop (`docker info`) | installé (winget `Docker.DockerDesktop`) | **WSL absent** : ne démarre pas tant que `wsl --install --no-distribution` (admin) + redémarrage ne sont pas faits |
+| Supabase CLI (`supabase --version`) | 2.121.0, binaire officiel GitHub (sha256 vérifié) dans `%LOCALAPPDATA%\Programs\supabase`, ajouté au PATH utilisateur ; connecté (jeton « argos-ticketing ») | installé le 2026-10-20. `supabase login` exige un vrai terminal (panneau Terminal), pas le shell de Claude |
 | Deno (`deno --version`) | 2.9.7 (winget `DenoLand.Deno`) | installé le 2026-10-20 |
 | GitHub CLI (`gh --version`) | 2.102.0, connecté `Haris692` (scopes repo, workflow) ; binaire `C:\Program Files\GitHub CLI\gh.exe` | installé le 2026-10-20 |
 | Git | remote `origin` = https://github.com/Haris692/argos-ticketing ; identité locale : Haris | relevé le 2026-10-20 |
@@ -47,7 +47,7 @@
 
 | Action | Commande |
 |---|---|
-| Lier le projet | `supabase link --project-ref <ref>` |
+| Lier le projet | `supabase link --project-ref gvdtzlkzvrqdtzeoxlfu` (projet « Ticketing », org Argos, eu-west-3) |
 | Appliquer les migrations | `supabase db push` |
 | Déployer une fonction | `supabase functions deploy <nom>` (`inbound-email` avec `--no-verify-jwt`) |
 | Secrets | `supabase secrets set NOM=valeur` |

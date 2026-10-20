@@ -25,6 +25,7 @@
 | D-015 | 2026-10-20 | Identité git du dépôt : « Haris », email du compte, définie localement au dépôt (comme Brume) | PROPOSÉ |
 | D-016 | 2026-10-20 | Repo dédié `Haris692/argos-ticketing`, distinct de la v1 `Haris692/Argos` (laissée intacte) ; **public** car l'offre GitHub gratuite refuse Pages sur un repo privé (vérifié : HTTP 422) ; aucun secret versionné, la sécurité repose sur la RLS | VALIDÉ |
 | D-017 | 2026-10-20 | Haris autorise d'office les actions de l'orchestrateur (push, GitHub, installations) : ne pas demander confirmation, mais annoncer ce qui est fait. Restent interdits : push forcé, `supabase db reset --linked` | VALIDÉ |
+| D-018 | 2026-10-20 | Réutiliser le projet Supabase « Ticketing » (`gvdtzlkzvrqdtzeoxlfu`, org Argos, eu-west-3) au lieu d'en créer un nouveau | PROPOSÉ |
 
 ## Idées hors périmètre (à rediscuter plus tard)
 

@@ -66,21 +66,7 @@
       "PowerShell(powershell -NoProfile -ExecutionPolicy Bypass -File tools/*)"
     ],
     "ask": [
-      "Agent(model:fable)",
-      "Bash(git push*)",
-      "PowerShell(git push*)",
-      "Bash(git remote*)",
-      "PowerShell(git remote*)",
-      "Bash(supabase link*)",
-      "PowerShell(supabase link*)",
-      "Bash(supabase db push*)",
-      "PowerShell(supabase db push*)",
-      "Bash(supabase functions deploy*)",
-      "PowerShell(supabase functions deploy*)",
-      "Bash(supabase secrets*)",
-      "PowerShell(supabase secrets*)",
-      "Bash(gh *)",
-      "PowerShell(gh *)"
+      "Agent(model:fable)"
     ],
     "deny": [
       "Bash(supabase db reset --linked*)",
